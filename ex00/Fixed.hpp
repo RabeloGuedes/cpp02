@@ -6,7 +6,7 @@
 /*   By: arabelo- <arabelo-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 14:32:30 by arabelo-          #+#    #+#             */
-/*   Updated: 2024/04/23 13:53:08 by arabelo-         ###   ########.fr       */
+/*   Updated: 2024/04/25 08:00:56 by arabelo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class	Fixed {
 		~Fixed(void);
 		void	operator=(const class Fixed &fix);
 		int		getRawBits(void) const;
-		int		*getBitsAddress(void);
 		void	setRawBits(int const raw);
 };
 

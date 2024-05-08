@@ -6,7 +6,7 @@
 /*   By: arabelo- <arabelo-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 14:38:03 by arabelo-          #+#    #+#             */
-/*   Updated: 2024/04/23 14:25:41 by arabelo-         ###   ########.fr       */
+/*   Updated: 2024/04/25 08:00:51 by arabelo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,4 @@ int	Fixed::getRawBits(void) const {
 
 void	Fixed::setRawBits(int const raw) {
 	_fixedPointNumValue = raw;
-}
-
-int		*Fixed::getBitsAddress(void) {
-	return (&_fixedPointNumValue);
 }
