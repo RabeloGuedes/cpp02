@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arabelo- <arabelo-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: arabelo- <arabelo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 08:52:55 by arabelo-          #+#    #+#             */
-/*   Updated: 2024/05/10 20:14:57 by arabelo-         ###   ########.fr       */
+/*   Updated: 2024/05/11 20:36:47 by arabelo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FIXED_HPP
 
 # include <iostream>
+# include <cmath>
 
 class	Fixed {
 	private:
@@ -24,7 +25,7 @@ class	Fixed {
 		Fixed(const Fixed &fix);
 		Fixed(const int raw);
 		Fixed(const float raw);
-		void				operator=(const Fixed &fix);
+		Fixed				&operator=(const Fixed &fix);
 		Fixed				&operator++(void);
 		Fixed				operator++(int);
 		Fixed				&operator--(void);

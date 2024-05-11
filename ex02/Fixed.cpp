@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arabelo- <arabelo-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: arabelo- <arabelo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 13:37:43 by arabelo-          #+#    #+#             */
-/*   Updated: 2024/05/10 20:14:49 by arabelo-         ###   ########.fr       */
+/*   Updated: 2024/05/11 20:37:10 by arabelo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,12 @@ Fixed::Fixed(const int raw) {
 }
 
 Fixed::Fixed(const float raw) {
-	_fixedPointNumValue = (raw * (1 << _fractionalBits));
+	_fixedPointNumValue = roundf(raw * (1 << _fractionalBits));
 }
 
-void	Fixed::operator=(const Fixed &fix) {
+Fixed	&Fixed::operator=(const Fixed &fix) {
 	_fixedPointNumValue = fix._fixedPointNumValue;
+	return (*this);
 }
 
 Fixed	&Fixed::operator++(void) {
