@@ -6,7 +6,7 @@
 /*   By: arabelo- <arabelo-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 07:57:26 by arabelo-          #+#    #+#             */
-/*   Updated: 2024/05/07 19:18:19 by arabelo-         ###   ########.fr       */
+/*   Updated: 2024/05/10 19:18:30 by arabelo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Fixed::Fixed(void): _fixedPointNumValue(0) {
 }
 
 Fixed::Fixed(const int n) {
-	_fixedPointNumValue = (n * (1 << _fractionalBits));
+	_fixedPointNumValue = (n << _fractionalBits);
 	std::cout << "Int constructor called" << std::endl;
 }
 
