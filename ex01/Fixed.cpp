@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arabelo- <arabelo-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: arabelo- <arabelo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 07:57:26 by arabelo-          #+#    #+#             */
-/*   Updated: 2024/05/10 19:18:30 by arabelo-         ###   ########.fr       */
+/*   Updated: 2024/05/11 20:32:20 by arabelo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Fixed::Fixed(const int n) {
 }
 
 Fixed::Fixed(const float n) {
-	_fixedPointNumValue = (n * (1 << _fractionalBits));
+	_fixedPointNumValue = roundf(n * (1 << _fractionalBits));
 	std::cout << "Float constructor called" << std::endl;
 }
 
@@ -31,9 +31,10 @@ Fixed::Fixed(const Fixed &fix) {
 	std::cout << "Copy constructor called" << std::endl;
 }
 
-void	Fixed::operator=(const Fixed &fix) {
+Fixed	&Fixed::operator=(const Fixed &fix) {
 	_fixedPointNumValue = fix._fixedPointNumValue;
 	std::cout << "Copy assignment operator called" << std::endl;
+	return (*this);
 }
 
 Fixed::~Fixed(void) {

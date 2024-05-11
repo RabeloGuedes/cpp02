@@ -90,11 +90,5 @@ int main( void ) {
 	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
 	std::cout << "e is " << e.toInt() << " as integer" << std::endl;
 
-	// printBits(10);
-	// printBits(-10);
-	printBits(b);
-	printBitsF(b);
-	printRawBits(b);
-
 	return 0;
 }
