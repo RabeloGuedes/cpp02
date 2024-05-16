@@ -6,7 +6,7 @@
 /*   By: arabelo- <arabelo-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 13:37:43 by arabelo-          #+#    #+#             */
-/*   Updated: 2024/05/15 19:32:25 by arabelo-         ###   ########.fr       */
+/*   Updated: 2024/05/16 19:25:45 by arabelo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ Fixed::Fixed(const float raw) {
 }
 
 Fixed	&Fixed::operator=(const Fixed &fix) {
-	_fixedPointNumValue = fix._fixedPointNumValue;
+	if (this != &fix)
+		_fixedPointNumValue = fix._fixedPointNumValue;
 	return (*this);
 }
 

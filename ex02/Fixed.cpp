@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arabelo- <arabelo-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: arabelo- <arabelo-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 13:37:43 by arabelo-          #+#    #+#             */
-/*   Updated: 2024/05/11 20:37:10 by arabelo-         ###   ########.fr       */
+/*   Updated: 2024/05/16 19:43:04 by arabelo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ Fixed::Fixed(const float raw) {
 }
 
 Fixed	&Fixed::operator=(const Fixed &fix) {
-	_fixedPointNumValue = fix._fixedPointNumValue;
+	if (this != &fix)
+		_fixedPointNumValue = fix._fixedPointNumValue;
 	return (*this);
 }
 
