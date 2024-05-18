@@ -3,25 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arabelo- <arabelo-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: arabelo- <arabelo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 13:47:59 by arabelo-          #+#    #+#             */
-/*   Updated: 2024/05/16 18:59:08 by arabelo-         ###   ########.fr       */
+/*   Updated: 2024/05/18 11:21:07 by arabelo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <Point.hpp>
 
 int main(void) {
-	// Point	t(4.2, 7.8);
-	// Point	r(t);
-	// Point	s = r;
-
-	// std::cout << "Point p: (" << p.getX() << ", " << p.getY() << ")" << std::endl;
-	// std::cout << "Point t: (" << t.getX() << ", " << t.getY() << ")" << std::endl;
-	// std::cout << "Point r: (" << r.getX() << ", " << r.getY() << ")" << std::endl;
-	// std::cout << "Point s: (" << s.getX() << ", " << s.getY() << ")" << std::endl;
-
 	const Point	a(-4.0, 2.0);
 	const Point	b(-2.0, 6.0);
 	const Point	c(-6.0, 4.0);

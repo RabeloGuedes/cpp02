@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bsp.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arabelo- <arabelo-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: arabelo- <arabelo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 07:55:06 by arabelo-          #+#    #+#             */
-/*   Updated: 2024/05/16 18:59:14 by arabelo-         ###   ########.fr       */
+/*   Updated: 2024/05/18 11:19:46 by arabelo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ bool	isTriangle(Point const a, Point const b, Point const c) {
 	Fixed	bcx = b.getX() - c.getX();
 	Fixed	bcy = b.getY() - c.getY();
 
-	Fixed	ab = sqrt((abx * abx + aby * aby).toFloat());
-	Fixed	ac = sqrt((acx * acx + acy * acy).toFloat());
-	Fixed	bc = sqrt((bcx * bcx + bcy * bcy).toFloat());
+	double	ab = sqrt((double)((abx * abx + aby * aby).toFloat()));
+	double	ac = sqrt((double)((acx * acx + acy * acy).toFloat()));
+	double	bc = sqrt((double)((bcx * bcx + bcy * bcy).toFloat()));
 	return (ab + ac > bc && ab + bc > ac && ac + bc > ab);
 }
 
